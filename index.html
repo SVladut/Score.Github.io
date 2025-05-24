@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scor Karate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="left">
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <div class="dropdown-menu" id="menu">
+        <label for="time-select">Timp:</label>
+        <select id="time-select">
+          <option value="60">1 minut</option>
+          <option value="90">1 minut 30 secunde</option>
+          <option value="120">2 minute</option>
+        </select>
+      </div>
+    </div>
+    <div class="center">
+      <div class="timer" id="timer">00:00</div>
+    </div>
+    <div class="right">
+  <div class="tooltip-container">
+    <span class="tooltip-icon">?</span>
+    <div class="tooltip-text">
+    <ul>  8 - 11 ani 1 minut Shobu Ippon</ul>
+      <ul>12-16 ani  1 minut 30 de secunde Shobu Ippon</ul>
+      <ul>17-18 ani  2 minute Shobu Ippon</ul>
+    </div>
+  </div>
+</div>
+  </header>
+
+  <main class="container">
+    <section class="half blue">
+      <div class="score" id="score-blue">0</div>
+      <div class="buttons">
+        <button onclick="updateScore('blue', 1)">+1</button>
+        <button onclick="updateScore('blue', -1)">-1</button>
+      </div>
+      <div class="penalties">
+  <div class="penalty-header">
+    <span>K&nbsp;</span><span>HK</span><span>&nbsp;H</span>
+  </div>
+  <div class="penalty-columns">
+    <div class="penalty-col">
+      <div class="circle" onclick="toggleCircle(this)"></div>
+      <div class="circle" onclick="toggleCircle(this)"></div>
+    </div>
+    <div class="penalty-col">
+      <div class="circle" onclick="toggleCircle(this)"></div>
+      <div class="circle" onclick="toggleCircle(this)"></div>
+    </div>
+    <div class="penalty-col">
+      <div class="circle" onclick="toggleCircle(this)"></div>
+      <div class="circle" onclick="toggleCircle(this)"></div>
+    </div>
+  </div>
+</div>
+
+    </section>
+
+<section class="middle-controls">
+  <button onclick="toggleTimer()" id="toggle-btn" class="control-btn">Start</button>
+<div class="time-button-group">
+  <div class="time-label">TIMP</div>
+  <div class="time-actions">
+    <div class="time-btn-minus" onclick="adjustTime(-1)">−</div>
+    <div class="time-btn-plus" onclick="adjustTime(1)">+</div>
+  </div>
+</div>
+
+
+  <button onclick="resetAll()" class="control-btn">Reset</button>
+  <img class="logo" src="logoVictoria.png"/>
+</section>
+
+
+
+
+    <section class="half red">
+      <div class="score" id="score-red">0</div>
+      <div class="buttons">
+        <button onclick="updateScore('red', 1)">+1</button>
+        <button onclick="updateScore('red', -1)">-1</button>
+      </div>
+      <div class="penalties">
+  <div class="penalty-header">
+    <span>K&nbsp;</span><span>HK</span><span>&nbsp;H</span>
+  </div>
+  <div class="penalty-columns">
+    <div class="penalty-col">
+      <div class="circle" onclick="toggleCircle(this)"></div>
+      <div class="circle" onclick="toggleCircle(this)"></div>
+    </div>
+    <div class="penalty-col">
+      <div class="circle" onclick="toggleCircle(this)"></div>
+      <div class="circle" onclick="toggleCircle(this)"></div>
+    </div>
+    <div class="penalty-col">
+      <div class="circle" onclick="toggleCircle(this)"></div>
+      <div class="circle" onclick="toggleCircle(this)"></div>
+    </div>
+  </div>
+</div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

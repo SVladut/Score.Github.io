@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kata Scor</title>
+  <link rel="stylesheet" href="kata.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="left">
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <div class="dropdown-menu" id="menu">
+        <label for="numarArbitri">Numar arbitri:</label>
+        <select id="numarArbitri">
+          <option value="3">3</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+    </div>
+        <div class="right">
+  <div class="tooltip-container">
+    <span class="tooltip-icon">?</span>
+    <div class="tooltip-text">
+      <ul>6-9 ani kohaku sistem, inclusiv finala</ul> 
+      <ul>10-13 ani kohaku sistem pana in semifinala -> finala de 4 cu note </ul>
+      <ul>14-18 ani kata liber din cele specificate kohaku sistem finala de 4 note </ul>
+    </div>
+  </div>
+</div>
+  </header>
+
+  <div class="arena">
+    <div class="half blue-side">
+      <div class="content">
+        <div id="blue-buttons" class="side-buttons"></div>
+      </div>
+    </div>
+
+    <div class="center-flags">
+      <div class="flags" id="flags"></div>
+    </div>
+
+    <div class="half red-side">
+      <div class="content">
+        <div id="red-buttons" class="side-buttons"></div>
+      </div>
+    </div>
+
+    <button id="reset-button" class="reset-button">Reset</button>
+  </div>
+
+  <script src="kata.js"></script>
+</body>
+</html>
